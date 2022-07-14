@@ -43,6 +43,7 @@ async function run() {
     const skipStep = getInput("skip_step");
     const buildScript = getInput("build_script");
     const cleanScript = getInput("clean_script");
+    const installFlags = getInput('install_flags');
     const script = getInput("script");
     const directory = getInput("directory") || process.cwd();
     const windowsVerbatimArguments =
@@ -56,6 +57,7 @@ async function run() {
       skipStep,
       buildScript,
       cleanScript,
+      installFlags,
       windowsVerbatimArguments,
       directory,
       script
@@ -65,6 +67,7 @@ async function run() {
       null,
       buildScript,
       cleanScript,
+      installFlags,
       windowsVerbatimArguments,
       directory,
       script

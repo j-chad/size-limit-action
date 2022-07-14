@@ -11,6 +11,7 @@ class Term {
     skipStep?: string,
     buildScript?: string,
     cleanScript?: string,
+    installFlags?: string,
     windowsVerbatimArguments?: boolean,
     directory?: string,
     script?: string
@@ -33,7 +34,7 @@ class Term {
     }
 
     if (skipStep !== INSTALL_STEP && skipStep !== BUILD_STEP) {
-      await exec(`${manager} install`, [], {
+      await exec(`${manager} install`, [installFlags], {
         cwd: directory
       });
     }
