@@ -14,6 +14,9 @@ inputs:
   clean_script:
     required: false
     description: 'a npm script to clean up build directory'
+  install_flags:
+    required: false
+    description: 'custom flags to be passed into the install argument'
   skip_step:
     required: false
     description: 'which step to skip, either "install" or "build"'
