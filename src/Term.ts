@@ -34,7 +34,8 @@ class Term {
     }
 
     if (skipStep !== INSTALL_STEP && skipStep !== BUILD_STEP) {
-      await exec(`${manager} install ${installFlags}`, [], {
+      console.log(installFlags);
+      await exec(`${manager} install`, [installFlags], {
         cwd: directory
       });
     }
